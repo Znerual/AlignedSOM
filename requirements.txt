@@ -1,0 +1,8 @@
+#git+https://github.com/smnishko/PySOMVis.git
+numpy
+pandas 
+pyparsing
+holoviews[recommended]
+somoclu
+openpyxl
+tqdm
