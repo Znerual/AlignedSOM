@@ -1,4 +1,4 @@
-#git+https://github.com/smnishko/PySOMVis.git
+git+https://github.com/Znerual/PySOMVis.git
 numpy
 pandas 
 pyparsing
