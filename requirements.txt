@@ -6,3 +6,4 @@ holoviews[recommended]
 somoclu
 openpyxl
 tqdm
+minisom
