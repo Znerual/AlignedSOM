@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "*"
+pandas = "*"
+jupyter = "*"
+minisom = "*"
+tqdm = "*"
+matplotlib = "*"
+seaborn = "*"
+scikit-image = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
