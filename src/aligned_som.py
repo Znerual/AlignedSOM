@@ -12,7 +12,7 @@ class AlignedSom():
 
     Details of the algorithm can be found in:
     Pampalk, Elias. "Aligned self-organizing maps." Proceedings of the Workshop on Self-Organizing Maps. 2003.
-    DOI: https://www.researchgate.net/publication/2887633_Aligned_Self-Organizing_Maps (no DOI found)
+    URL: https://www.researchgate.net/publication/2887633_Aligned_Self-Organizing_Maps (no DOI found)
 
     """
     def __init__(self,
@@ -114,6 +114,27 @@ class AlignedSom():
             List[np.ndarray]: Weights by layer each codebook has dimension (x, y, input_len)
         """
         return [layer.get_weights() for layer in self.layers]
+
+    def set_layer_weights(self, weights_by_layer: List[np.ndarray]) -> None:
+        """Overrides the layers with existing codebook weights from a traind Aligned SOM
+
+        Args:
+            weights_by_layer (List[np.ndarray]):
+                A list of codebook weights where each item in the list correspons to a
+                layer codebook with dimension (x, y, input_len)
+        """
+        layers = []
+        for weights in weights_by_layer:
+            layers.append(Layer(
+                dimension=self.dimension,
+                input_len=self._input_len,
+                initial_codebook=np.array(weights, dtype=np.float32),
+                sigma=self._sigma,
+                learning_rate=self._learning_rate,
+                neighborhood_function=self._neighborhood_function,
+                activation_distance=self._activation_distance,
+                random_seed=self.random_seed))
+        self.layers = layers
 
     # initiallize the distances between layers as a fraction of the distance between units
     # used default gaussian with sigma = 1.0 for distance between layers weighted by ratio "layer_distance_ratio"
