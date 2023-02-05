@@ -19,9 +19,11 @@ The features are split into activity (aspect A) and appearance (aspect B) featur
 
 ![Alt text](animals_dataset_exmple.png?raw=true "Alignd SOM on Animals Dataset")
 
-## Setup
-* todo: add setup description
-* todo: add current requirements.txt freeze
+## How to reproduce
+
+The algorithm and all notebooks were tested with Python 3.9 and all libraries requirements used can be found in the Pipfile or Pipfile.lock.   
+The virtual environment can easily be recreated using [Pipenv](https://pipenv.pypa.io/en/latest/index.html) (pipenv install).   
+We further provide a freez of the used requirements in the requirements.txt file.
 
 ## Data
 
