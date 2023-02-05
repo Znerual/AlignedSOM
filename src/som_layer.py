@@ -4,7 +4,7 @@ from minisom import MiniSom
 
 
 class Layer(MiniSom):
-    """One layer of the Alignd SOM extending the MiniSom library"""
+    """One layer of the Aligned SOM extending the MiniSom library"""
     def __init__(self,
                  dimension: Tuple[int, int],
                  input_len: int,
@@ -14,7 +14,7 @@ class Layer(MiniSom):
                  neighborhood_function: str = 'gaussian',
                  activation_distance: str = 'euclidean',
                  random_seed: int = None) -> None:
-        """Constructs one layer of the Alignd SOM
+        """Constructs one layer of the Aligned SOM
 
         Args:
             dimension (Tuple[int, int]): x and y dimensions of the resulting SOM
