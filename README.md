@@ -11,6 +11,8 @@ The base visualization functions for one Layer and functions for loading the dat
 
 We show here a small example on the animals dataset as in the paper "Aligned Self-Organizing Maps" [[1]](#1).
 
+The dataset comprises 16 records of different kinds of animals, described by 13 binary-valued attributes. The animals can be categorised into three classes: birds, carnivores, and herbivores.
+
 The features are split into activity (aspect A) and appearance (aspect B) features.   
 **activity features**: hunt, run, fly, swim   
 **appearance features**: small, medium, big, 2_legs, 4_legs, hair, hooves, mane, feathers 
