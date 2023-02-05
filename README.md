@@ -5,19 +5,26 @@ The implementation of the SOM training is closely modelled after the decription 
 
 The Alignd SOM implementation uses the well known MiniSom package and trains multiple layers of the MiniSom [[2]](#2). A Layer has in extension to the normal MiniSom implementation the possibility to set initial codebook weights. Furter, the update method is adapted to model the distance between layers. We implemented an online-training algorithm which iteratively traines all layers.
 
+The base visualization functions for one Layer and functions for loading the datasets were taken from [PySOMVis](https://github.com/smnishko/PySOMVis).
+
+## Visualization Example on Animals Dataset
+
+We show here a small example on the animals dataset as in the paper "Aligned Self-Organizing Maps" [[1]](#1).
+
+The features are split into activity (aspect A) and appearance (aspect B) features.   
+**activity features**: hunt, run, fly, swim   
+**appearance features**: small, medium, big, 2_legs, 4_legs, hair, hooves, mane, feathers 
+
+![Alt text](animals_dataset_exmple.png?raw=true "Alignd SOM on Animals Dataset")
 
 ## Setup
 * todo: add setup description
 * todo: add current requirements.txt freeze
 
-## Visualization Example on Animals Dataset
-
-![Alt text](animals_dataset_exmple.png?raw=true "Alignd SOM on Animals Dataset")
-
 ## Data
 
-The datasets were optained from **Data Mining with the Java SOMToolbox**.   
-http://www.ifs.tuwien.ac.at/dm/somtoolbox/datasets.html
+The datasets were optained from [Data Mining with the Java SOMToolbox](http://www.ifs.tuwien.ac.at/dm/somtoolbox/index.html).   
+They can be downloaded directly from the Section [Benchmark data & maps](http://www.ifs.tuwien.ac.at/dm/somtoolbox/datasets.html).
 
 ## References
 
