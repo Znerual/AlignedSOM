@@ -1,5 +1,7 @@
 # Aligned SOM
 
+GitHub Link: https://github.com/Znerual/AlignedSOM
+
 Aligned SOMs aims at training mulitple layers of n SOMs with differently weighted subsets of attributes.
 The implementation of the SOM training is closely modelled after the decription in the paper Aligned self-organizing maps by Pampalk, Elias [[1]](#1).
 
