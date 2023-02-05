@@ -8,9 +8,19 @@ The Alignd SOM implementation uses the well known MiniSom package and trains mul
 
 ## Setup
 * todo: add setup description
-* todo: add current requirements.txt freez
+* todo: add current requirements.txt freeze
+
+## Visualization Example on Animals Dataset
+
+![Alt text](animals_dataset_exmple.png?raw=true "Alignd SOM on Animals Dataset")
+
+## Data
+
+The datasets were optained from **Data Mining with the Java SOMToolbox**.   
+http://www.ifs.tuwien.ac.at/dm/somtoolbox/datasets.html
 
 ## References
+
 <a id="1">[1]</a>
 Pampalk, Elias.
 "Aligned self-organizing maps." Proceedings of the Workshop on Self-Organizing Maps. 2003.   
