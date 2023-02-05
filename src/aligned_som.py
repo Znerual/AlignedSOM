@@ -133,7 +133,7 @@ class AlignedSom():
                 learning_rate=self._learning_rate,
                 neighborhood_function=self._neighborhood_function,
                 activation_distance=self._activation_distance,
-                random_seed=self.random_seed))
+                random_seed=self._random_seed))
         self.layers = layers
 
     # initiallize the distances between layers as a fraction of the distance between units
