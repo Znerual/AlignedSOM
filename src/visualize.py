@@ -103,18 +103,18 @@ def plot_aligned_som(asom: AlignedSom, data: np.ndarray, visualization_function=
     Returns:
         matplotlib figure: Figure object_
     """
-    assert num_plots <= asom.num_layers, "Number of plots must be less than or equal to the number of layers"
+    assert num_plots <= asom._num_layers, "Number of plots must be less than or equal to the number of layers"
 
     # calculate the histograms
     visualizations = []
     for layer_weights in asom.get_layer_weights():
-        layer_weights = np.reshape(layer_weights, (asom.dimension[0] * asom.dimension[1], data.shape[1]))
+        layer_weights = np.reshape(layer_weights, (asom._dimension[0] * asom._dimension[1], data.shape[1]))
         if visualization_function == UMatrix:
             histogram = visualization_function(
-                asom.dimension[0], asom.dimension[1], layer_weights, data.shape[1], **kwargs)
+                asom._dimension[0], asom._dimension[1], layer_weights, data.shape[1], **kwargs)
         else:
             histogram = visualization_function(
-                asom.dimension[0], asom.dimension[1], layer_weights, data, **kwargs)
+                asom._dimension[0], asom._dimension[1], layer_weights, data, **kwargs)
         visualizations.append(histogram)
 
     # decrease figure size to increase plotting speed for larger plots
@@ -131,11 +131,11 @@ def plot_aligned_som(asom: AlignedSom, data: np.ndarray, visualization_function=
 
     # create the plot
     figure, axis = plt.subplots(1, num_plots, figsize=figsize)
-    for i, vis_i in enumerate(np.linspace(0, asom.num_layers - 1, num_plots, dtype=int)):
+    for i, vis_i in enumerate(np.linspace(0, asom._num_layers - 1, num_plots, dtype=int)):
         hp = sns.heatmap(visualizations[vis_i], ax=axis[i], vmin=0, vmax=max_value, cbar=False, cmap='viridis')
         hp.set(xticklabels=[])
         hp.set(yticklabels=[])
         axis[i].tick_params(left=False, bottom=False)
-        hp.set(xlabel=f"Weight Feature 1: {asom.weights_by_layer[vis_i][0]}")
+        hp.set(xlabel=f"Weight Feature 1: {asom._weights_by_layer[vis_i][0]}")
     plt.show()
     return figure
