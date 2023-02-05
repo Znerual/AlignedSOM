@@ -126,7 +126,7 @@ class AlignedSom():
         layers = []
         for weights in weights_by_layer:
             layers.append(Layer(
-                dimension=self.dimension,
+                dimension=self._dimension,
                 input_len=self._input_len,
                 initial_codebook=np.array(weights, dtype=np.float32),
                 sigma=self._sigma,
