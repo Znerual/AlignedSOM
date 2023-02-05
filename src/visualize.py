@@ -136,6 +136,6 @@ def plot_aligned_som(asom: AlignedSom, data: np.ndarray, visualization_function=
         hp.set(xticklabels=[])
         hp.set(yticklabels=[])
         axis[i].tick_params(left=False, bottom=False)
-        hp.set(xlabel=f"Weight Feature 1: {asom._weights_by_layer[vis_i][0]}")
+        hp.set(xlabel=f"Weight Feature 1: {round(asom._weights_by_layer[vis_i][0],2)}")
     plt.show()
     return figure
