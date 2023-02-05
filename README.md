@@ -7,6 +7,13 @@ The Alignd SOM implementation uses the well known MiniSom package and trains mul
 
 The base visualization functions for one Layer and functions for loading the datasets were taken from [PySOMVis](https://github.com/smnishko/PySOMVis).
 
+## Notebooks
+
+We provide three notebooks exploring the Algind SOMs implementation.
+* **AlignedSOM_implementation_details:** Description of essential parts of the implemented code in more detail.
+* **AlignedSOM_chainlink:** Visual evaluation of the Alignd SOMs on the Chainlink dataset
+* **AlignedSOM_10clusters:** Visual evaluation of the Alignd SOMs on the 10Clusters dataset
+
 ## Visualization Example on Animals Dataset
 
 We show here a small example on the animals dataset as in the paper "Aligned Self-Organizing Maps" [[1]](#1).
